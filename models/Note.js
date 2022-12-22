@@ -8,13 +8,9 @@ const NoteSchema = new mongoose.Schema({
     },
     body:{
         type: String,
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now()
-    },
-    updatedAt: Date
-    
+    }
+},{
+    timestamps: true
 })
 
 module.exports = Note = mongoose.model('note',NoteSchema)
