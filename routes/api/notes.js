@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Note.create(req.body)
       .then(note => res.json({msg: 'Note added succesfully'}))
-      .catch(err => res.status(400).json({ error: 'Unable to add this book' }));
+      .catch(err => res.status(400).json({ error: 'Unable to add this note' }));
 });
 
 router.put('/:id', (req, res) => {
